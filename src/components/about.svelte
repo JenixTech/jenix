@@ -17,16 +17,16 @@
     margin-bottom: 10px;
   }
   .about a {
-    background: #0f0f0f;
-    color: white;
+    background: #f0f0f0;
+    color: #0f0f0f;
     padding: 10px 30px;
     margin-top: 30px;
-    font-weight: 100;
+    font-weight: 600;
     transition: all 150ms;
   }
   .about a:hover,
   .about a:active {
-    background: #757575;
+    background: #d1d1d1;
   }
 
   .certification-badge {
@@ -38,7 +38,7 @@
 
 <div class="about">
   <div>
-    <p>Hi, I'm Will!</p>
+    <p>We're Jenix</p>
     <p>
       I'm a Software Engineer experienced in full-stack and mobile development.
     </p>
@@ -61,14 +61,6 @@
       Android development. Lemmi, our flagship application, is slated for
       release in Q4 2020.
     </p>
-    <img
-      class="certification-badge"
-      src={`images/azure-developer-associate.png`}
-      alt="Azure Developer Associate Badge" />
-    <img
-      class="certification-badge"
-      src={`images/aws-developer-associate.png`}
-      alt="AWS Developer Associate Badge" />
   </div>
   <a href={about.email.url} target="_blank">{about.email.label}</a>
 </div>

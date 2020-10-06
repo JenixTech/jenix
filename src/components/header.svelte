@@ -49,7 +49,7 @@
 
 <nav>
   <div class="title-wrapper">
-    <h1 on:click={() => handleClickHome()} class="title">WILL NIXON</h1>
+    <h1 on:click={() => handleClickHome()} class="title">JENIX</h1>
   </div>
   <div class="links-wrapper">
     {#each Object.keys(navigation) as link}
