@@ -5,12 +5,12 @@
   export let handleClickProject;
   export let selectedProject;
   let project = projects.find(
-    p => p.title.toLowerCase() === selectedProject.toLowerCase()
+    (p) => p.title.toLowerCase() === selectedProject.toLowerCase()
   );
   let projectID = projects.indexOf(project);
   beforeUpdate(() => {
     project = projects.find(
-      p => p.title.toLowerCase() === selectedProject.toLowerCase()
+      (p) => p.title.toLowerCase() === selectedProject.toLowerCase()
     );
   });
 </script>
@@ -42,26 +42,16 @@
   .project-info .title {
     font-size: 28px;
     margin: 0;
-    color: #0f0f0f;
+    color: #f0f0f0;
   }
   .project-info .description {
     font-size: 18px;
     text-align: left;
-    color: #757575;
+    color: #dddcdc;
   }
   .project-info .sub-title {
     margin: 15px 0;
-    color: #0f0f0f;
-  }
-  .tech-stack {
-    text-align: left;
-  }
-  .tools {
-    margin: 5px 0;
-    color: #0f0f0f;
-  }
-  .tools span {
-    color: #757575;
+    color: #dddcdc;
   }
   .project-info .links {
     width: 100%;
@@ -117,16 +107,6 @@
     <div class="project-info">
       <h2 class="title">{project.title.toUpperCase()}</h2>
       <p class="description">{project.description}</p>
-      <div class="tech-stack">
-        <h3 class="sub-title">TECHNOLOGIES:</h3>
-        {#each Object.keys(project.tools) as tool}
-          <p class="tools">
-            <b>{tool}</b>
-            :
-            <span>{project.tools[tool].join(', ')}</span>
-          </p>
-        {/each}
-      </div>
       <div class="links">
         {#each Object.keys(project.links) as link}
           <a href={project.links[link]} target="_blank">{link}</a>
@@ -152,7 +132,6 @@
             NEXT
           </button>
         </div>
-
       </div>
     </div>
     <div class="mobile-image-wrapper">

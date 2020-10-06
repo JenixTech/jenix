@@ -18,9 +18,9 @@ export const projects = [
 ];
 
 export const links = {
-  twitter: { label: "TWITTER", url: "https://twitter.com/willnix86" },
-  instagram: { label: "INSTAGRAM", url: "https://www.linkedin.com/in/willnixon1" },
-  facebook: { label: "FACEBOOK", url: "https://github.com/willnix86" }
+  twitter: { label: "TWITTER", url: "https://twitter.com/jenixtech" },
+  instagram: { label: "INSTAGRAM", url: "https://www.instagram.com/jenixtech" },
+  facebook: { label: "FACEBOOK", url: "https://www.facebook.com/jenixtech" }
 };
 
 export const about = {

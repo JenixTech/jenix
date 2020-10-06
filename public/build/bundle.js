@@ -416,9 +416,9 @@ var app = (function () {
     ];
 
     const links = {
-      twitter: { label: "TWITTER", url: "https://twitter.com/willnix86" },
-      instagram: { label: "INSTAGRAM", url: "https://www.linkedin.com/in/willnixon1" },
-      facebook: { label: "FACEBOOK", url: "https://github.com/willnix86" }
+      twitter: { label: "TWITTER", url: "https://twitter.com/jenixtech" },
+      instagram: { label: "INSTAGRAM", url: "https://www.instagram.com/jenixtech" },
+      facebook: { label: "FACEBOOK", url: "https://www.facebook.com/jenixtech" }
     };
 
     const about = {
@@ -893,69 +893,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    function get_each_context_1(ctx, list, i) {
-    	const child_ctx = ctx.slice();
-    	child_ctx[11] = list[i];
-    	return child_ctx;
-    }
-
-    // (122:8) {#each Object.keys(project.tools) as tool}
-    function create_each_block_1(ctx) {
-    	let p;
-    	let b;
-    	let t0_value = /*tool*/ ctx[11] + "";
-    	let t0;
-    	let t1;
-    	let span;
-    	let t2_value = /*project*/ ctx[2].tools[/*tool*/ ctx[11]].join(", ") + "";
-    	let t2;
-    	let t3;
-
-    	const block = {
-    		c: function create() {
-    			p = element("p");
-    			b = element("b");
-    			t0 = text(t0_value);
-    			t1 = text("\n            :\n            ");
-    			span = element("span");
-    			t2 = text(t2_value);
-    			t3 = space();
-    			add_location(b, file$2, 123, 12, 2652);
-    			attr_dev(span, "class", "svelte-1d3mcw8");
-    			add_location(span, file$2, 125, 12, 2692);
-    			attr_dev(p, "class", "tools svelte-1d3mcw8");
-    			add_location(p, file$2, 122, 10, 2622);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-    			append_dev(p, b);
-    			append_dev(b, t0);
-    			append_dev(p, t1);
-    			append_dev(p, span);
-    			append_dev(span, t2);
-    			append_dev(p, t3);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*project*/ 4 && t0_value !== (t0_value = /*tool*/ ctx[11] + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*project*/ 4 && t2_value !== (t2_value = /*project*/ ctx[2].tools[/*tool*/ ctx[11]].join(", ") + "")) set_data_dev(t2, t2_value);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_each_block_1.name,
-    		type: "each",
-    		source: "(122:8) {#each Object.keys(project.tools) as tool}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (131:8) {#each Object.keys(project.links) as link}
+    // (111:8) {#each Object.keys(project.links) as link}
     function create_each_block$1(ctx) {
     	let a;
     	let t_value = /*link*/ ctx[8] + "";
@@ -968,8 +906,8 @@ var app = (function () {
     			t = text(t_value);
     			attr_dev(a, "href", a_href_value = /*project*/ ctx[2].links[/*link*/ ctx[8]]);
     			attr_dev(a, "target", "_blank");
-    			attr_dev(a, "class", "svelte-1d3mcw8");
-    			add_location(a, file$2, 131, 10, 2869);
+    			attr_dev(a, "class", "svelte-15eqfma");
+    			add_location(a, file$2, 111, 10, 2436);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -991,7 +929,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(131:8) {#each Object.keys(project.links) as link}",
+    		source: "(111:8) {#each Object.keys(project.links) as link}",
     		ctx
     	});
 
@@ -999,13 +937,13 @@ var app = (function () {
     }
 
     function create_fragment$2(ctx) {
-    	let div7;
+    	let div6;
     	let img0;
     	let img0_src_value;
     	let img0_alt_value;
     	let t0;
-    	let div6;
-    	let div4;
+    	let div5;
+    	let div3;
     	let h2;
     	let t1_value = /*project*/ ctx[2].title.toUpperCase() + "";
     	let t1;
@@ -1015,41 +953,29 @@ var app = (function () {
     	let t3;
     	let t4;
     	let div0;
-    	let h3;
-    	let t6;
+    	let t5;
+    	let div2;
+    	let button0;
     	let t7;
     	let div1;
-    	let t8;
-    	let div3;
-    	let button0;
-    	let t10;
-    	let div2;
     	let button1;
-    	let t11;
+    	let t8;
     	let button1_class_value;
-    	let t12;
+    	let t9;
     	let p1;
-    	let t13;
+    	let t10;
     	let p1_class_value;
-    	let t14;
+    	let t11;
     	let button2;
-    	let t15;
+    	let t12;
     	let button2_class_value;
-    	let t16;
-    	let div5;
+    	let t13;
+    	let div4;
     	let img1;
     	let img1_src_value;
     	let img1_alt_value;
     	let mounted;
     	let dispose;
-    	let each_value_1 = Object.keys(/*project*/ ctx[2].tools);
-    	validate_each_argument(each_value_1);
-    	let each_blocks_1 = [];
-
-    	for (let i = 0; i < each_value_1.length; i += 1) {
-    		each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
-    	}
-
     	let each_value = Object.keys(/*project*/ ctx[2].links);
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -1060,11 +986,11 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div7 = element("div");
+    			div6 = element("div");
     			img0 = element("img");
     			t0 = space();
-    			div6 = element("div");
-    			div4 = element("div");
+    			div5 = element("div");
+    			div3 = element("div");
     			h2 = element("h2");
     			t1 = text(t1_value);
     			t2 = space();
@@ -1072,135 +998,112 @@ var app = (function () {
     			t3 = text(t3_value);
     			t4 = space();
     			div0 = element("div");
-    			h3 = element("h3");
-    			h3.textContent = "TECHNOLOGIES:";
-    			t6 = space();
-
-    			for (let i = 0; i < each_blocks_1.length; i += 1) {
-    				each_blocks_1[i].c();
-    			}
-
-    			t7 = space();
-    			div1 = element("div");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t8 = space();
-    			div3 = element("div");
+    			t5 = space();
+    			div2 = element("div");
     			button0 = element("button");
     			button0.textContent = "BACK TO WORK";
-    			t10 = space();
-    			div2 = element("div");
+    			t7 = space();
+    			div1 = element("div");
     			button1 = element("button");
-    			t11 = text("PREV");
-    			t12 = space();
+    			t8 = text("PREV");
+    			t9 = space();
     			p1 = element("p");
-    			t13 = text("/");
-    			t14 = space();
+    			t10 = text("/");
+    			t11 = space();
     			button2 = element("button");
-    			t15 = text("NEXT");
-    			t16 = space();
-    			div5 = element("div");
+    			t12 = text("NEXT");
+    			t13 = space();
+    			div4 = element("div");
     			img1 = element("img");
-    			attr_dev(img0, "class", "project-image svelte-1d3mcw8");
+    			attr_dev(img0, "class", "project-image svelte-15eqfma");
     			if (img0.src !== (img0_src_value = `images/${/*project*/ ctx[2].webImage}.png`)) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", img0_alt_value = `${/*project*/ ctx[2].title} website image`);
-    			add_location(img0, file$2, 111, 2, 2184);
-    			attr_dev(h2, "class", "title svelte-1d3mcw8");
-    			add_location(h2, file$2, 117, 6, 2373);
-    			attr_dev(p0, "class", "description svelte-1d3mcw8");
-    			add_location(p0, file$2, 118, 6, 2432);
-    			attr_dev(h3, "class", "sub-title svelte-1d3mcw8");
-    			add_location(h3, file$2, 120, 8, 2520);
-    			attr_dev(div0, "class", "tech-stack svelte-1d3mcw8");
-    			add_location(div0, file$2, 119, 6, 2487);
-    			attr_dev(div1, "class", "links svelte-1d3mcw8");
-    			add_location(div1, file$2, 129, 6, 2788);
-    			attr_dev(button0, "class", "svelte-1d3mcw8");
-    			add_location(button0, file$2, 135, 8, 2994);
+    			add_location(img0, file$2, 101, 2, 2052);
+    			attr_dev(h2, "class", "title svelte-15eqfma");
+    			add_location(h2, file$2, 107, 6, 2241);
+    			attr_dev(p0, "class", "description svelte-15eqfma");
+    			add_location(p0, file$2, 108, 6, 2300);
+    			attr_dev(div0, "class", "links svelte-15eqfma");
+    			add_location(div0, file$2, 109, 6, 2355);
+    			attr_dev(button0, "class", "svelte-15eqfma");
+    			add_location(button0, file$2, 115, 8, 2561);
 
     			attr_dev(button1, "class", button1_class_value = "" + (null_to_empty(`${/*project*/ ctx[2].title !== projects[0].title
 			? ""
-			: "hidden"}`) + " svelte-1d3mcw8"));
+			: "hidden"}`) + " svelte-15eqfma"));
 
-    			add_location(button1, file$2, 139, 10, 3147);
+    			add_location(button1, file$2, 119, 10, 2714);
 
     			attr_dev(p1, "class", p1_class_value = "" + (null_to_empty(`${/*project*/ ctx[2].title !== projects[0].title && /*project*/ ctx[2].title !== projects[projects.length - 1].title
 			? ""
-			: "hidden"}`) + " svelte-1d3mcw8"));
+			: "hidden"}`) + " svelte-15eqfma"));
 
-    			add_location(p1, file$2, 144, 10, 3375);
+    			add_location(p1, file$2, 124, 10, 2942);
 
     			attr_dev(button2, "class", button2_class_value = "" + (null_to_empty(`${/*project*/ ctx[2].title !== projects[projects.length - 1].title
 			? ""
-			: "hidden"}`) + " svelte-1d3mcw8"));
+			: "hidden"}`) + " svelte-15eqfma"));
 
-    			add_location(button2, file$2, 148, 10, 3552);
-    			attr_dev(div2, "class", "button-wrapper svelte-1d3mcw8");
-    			add_location(div2, file$2, 138, 8, 3108);
-    			attr_dev(div3, "class", "navigation svelte-1d3mcw8");
-    			add_location(div3, file$2, 134, 6, 2961);
-    			attr_dev(div4, "class", "project-info svelte-1d3mcw8");
-    			add_location(div4, file$2, 116, 4, 2340);
-    			attr_dev(img1, "class", "project-mobile-image svelte-1d3mcw8");
+    			add_location(button2, file$2, 128, 10, 3119);
+    			attr_dev(div1, "class", "button-wrapper svelte-15eqfma");
+    			add_location(div1, file$2, 118, 8, 2675);
+    			attr_dev(div2, "class", "navigation svelte-15eqfma");
+    			add_location(div2, file$2, 114, 6, 2528);
+    			attr_dev(div3, "class", "project-info svelte-15eqfma");
+    			add_location(div3, file$2, 106, 4, 2208);
+    			attr_dev(img1, "class", "project-mobile-image svelte-15eqfma");
     			if (img1.src !== (img1_src_value = `images/${/*project*/ ctx[2].mobileImage}.png`)) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", img1_alt_value = `${/*project*/ ctx[2].title} mobile image`);
-    			add_location(img1, file$2, 158, 6, 3873);
-    			attr_dev(div5, "class", "mobile-image-wrapper svelte-1d3mcw8");
-    			add_location(div5, file$2, 157, 4, 3832);
-    			attr_dev(div6, "class", "project-details svelte-1d3mcw8");
-    			add_location(div6, file$2, 115, 2, 2306);
-    			attr_dev(div7, "class", "project-details-wrapper svelte-1d3mcw8");
-    			add_location(div7, file$2, 110, 0, 2144);
+    			add_location(img1, file$2, 137, 6, 3439);
+    			attr_dev(div4, "class", "mobile-image-wrapper svelte-15eqfma");
+    			add_location(div4, file$2, 136, 4, 3398);
+    			attr_dev(div5, "class", "project-details svelte-15eqfma");
+    			add_location(div5, file$2, 105, 2, 2174);
+    			attr_dev(div6, "class", "project-details-wrapper svelte-15eqfma");
+    			add_location(div6, file$2, 100, 0, 2012);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div7, anchor);
-    			append_dev(div7, img0);
-    			append_dev(div7, t0);
-    			append_dev(div7, div6);
-    			append_dev(div6, div4);
-    			append_dev(div4, h2);
+    			insert_dev(target, div6, anchor);
+    			append_dev(div6, img0);
+    			append_dev(div6, t0);
+    			append_dev(div6, div5);
+    			append_dev(div5, div3);
+    			append_dev(div3, h2);
     			append_dev(h2, t1);
-    			append_dev(div4, t2);
-    			append_dev(div4, p0);
+    			append_dev(div3, t2);
+    			append_dev(div3, p0);
     			append_dev(p0, t3);
-    			append_dev(div4, t4);
-    			append_dev(div4, div0);
-    			append_dev(div0, h3);
-    			append_dev(div0, t6);
-
-    			for (let i = 0; i < each_blocks_1.length; i += 1) {
-    				each_blocks_1[i].m(div0, null);
-    			}
-
-    			append_dev(div4, t7);
-    			append_dev(div4, div1);
+    			append_dev(div3, t4);
+    			append_dev(div3, div0);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(div1, null);
+    				each_blocks[i].m(div0, null);
     			}
 
-    			append_dev(div4, t8);
-    			append_dev(div4, div3);
-    			append_dev(div3, button0);
-    			append_dev(div3, t10);
+    			append_dev(div3, t5);
     			append_dev(div3, div2);
-    			append_dev(div2, button1);
-    			append_dev(button1, t11);
-    			append_dev(div2, t12);
-    			append_dev(div2, p1);
-    			append_dev(p1, t13);
-    			append_dev(div2, t14);
-    			append_dev(div2, button2);
-    			append_dev(button2, t15);
-    			append_dev(div6, t16);
-    			append_dev(div6, div5);
-    			append_dev(div5, img1);
+    			append_dev(div2, button0);
+    			append_dev(div2, t7);
+    			append_dev(div2, div1);
+    			append_dev(div1, button1);
+    			append_dev(button1, t8);
+    			append_dev(div1, t9);
+    			append_dev(div1, p1);
+    			append_dev(p1, t10);
+    			append_dev(div1, t11);
+    			append_dev(div1, button2);
+    			append_dev(button2, t12);
+    			append_dev(div5, t13);
+    			append_dev(div5, div4);
+    			append_dev(div4, img1);
 
     			if (!mounted) {
     				dispose = [
@@ -1225,30 +1128,6 @@ var app = (function () {
     			if (dirty & /*project*/ 4 && t3_value !== (t3_value = /*project*/ ctx[2].description + "")) set_data_dev(t3, t3_value);
 
     			if (dirty & /*project, Object*/ 4) {
-    				each_value_1 = Object.keys(/*project*/ ctx[2].tools);
-    				validate_each_argument(each_value_1);
-    				let i;
-
-    				for (i = 0; i < each_value_1.length; i += 1) {
-    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
-
-    					if (each_blocks_1[i]) {
-    						each_blocks_1[i].p(child_ctx, dirty);
-    					} else {
-    						each_blocks_1[i] = create_each_block_1(child_ctx);
-    						each_blocks_1[i].c();
-    						each_blocks_1[i].m(div0, null);
-    					}
-    				}
-
-    				for (; i < each_blocks_1.length; i += 1) {
-    					each_blocks_1[i].d(1);
-    				}
-
-    				each_blocks_1.length = each_value_1.length;
-    			}
-
-    			if (dirty & /*project, Object*/ 4) {
     				each_value = Object.keys(/*project*/ ctx[2].links);
     				validate_each_argument(each_value);
     				let i;
@@ -1261,7 +1140,7 @@ var app = (function () {
     					} else {
     						each_blocks[i] = create_each_block$1(child_ctx);
     						each_blocks[i].c();
-    						each_blocks[i].m(div1, null);
+    						each_blocks[i].m(div0, null);
     					}
     				}
 
@@ -1274,19 +1153,19 @@ var app = (function () {
 
     			if (dirty & /*project*/ 4 && button1_class_value !== (button1_class_value = "" + (null_to_empty(`${/*project*/ ctx[2].title !== projects[0].title
 			? ""
-			: "hidden"}`) + " svelte-1d3mcw8"))) {
+			: "hidden"}`) + " svelte-15eqfma"))) {
     				attr_dev(button1, "class", button1_class_value);
     			}
 
     			if (dirty & /*project*/ 4 && p1_class_value !== (p1_class_value = "" + (null_to_empty(`${/*project*/ ctx[2].title !== projects[0].title && /*project*/ ctx[2].title !== projects[projects.length - 1].title
 			? ""
-			: "hidden"}`) + " svelte-1d3mcw8"))) {
+			: "hidden"}`) + " svelte-15eqfma"))) {
     				attr_dev(p1, "class", p1_class_value);
     			}
 
     			if (dirty & /*project*/ 4 && button2_class_value !== (button2_class_value = "" + (null_to_empty(`${/*project*/ ctx[2].title !== projects[projects.length - 1].title
 			? ""
-			: "hidden"}`) + " svelte-1d3mcw8"))) {
+			: "hidden"}`) + " svelte-15eqfma"))) {
     				attr_dev(button2, "class", button2_class_value);
     			}
 
@@ -1301,8 +1180,7 @@ var app = (function () {
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div7);
-    			destroy_each(each_blocks_1, detaching);
+    			if (detaching) detach_dev(div6);
     			destroy_each(each_blocks, detaching);
     			mounted = false;
     			run_all(dispose);
@@ -1585,20 +1463,20 @@ var app = (function () {
     			create_component(projectdetails.$$.fragment);
     			attr_dev(path0, "d", "M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z");
     			attr_dev(path0, "fill", "#757575");
-    			attr_dev(path0, "class", "svelte-14gq9ad");
+    			attr_dev(path0, "class", "svelte-1prsfd1");
     			add_location(path0, file$3, 52, 8, 1120);
     			attr_dev(path1, "d", "M0 0h24v24H0z");
     			attr_dev(path1, "fill", "none");
-    			attr_dev(path1, "class", "svelte-14gq9ad");
+    			attr_dev(path1, "class", "svelte-1prsfd1");
     			add_location(path1, file$3, 55, 8, 1233);
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg, "height", "24");
     			attr_dev(svg, "viewBox", "0 0 24 24");
     			attr_dev(svg, "width", "24");
     			add_location(svg, file$3, 47, 6, 996);
-    			attr_dev(p, "class", "svelte-14gq9ad");
+    			attr_dev(p, "class", "svelte-1prsfd1");
     			add_location(p, file$3, 57, 6, 1291);
-    			attr_dev(button, "class", "back-button svelte-14gq9ad");
+    			attr_dev(button, "class", "back-button svelte-1prsfd1");
     			add_location(button, file$3, 44, 4, 893);
     		},
     		m: function mount(target, anchor) {
@@ -1725,7 +1603,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			if_block.c();
-    			attr_dev(div, "class", "portfolio svelte-14gq9ad");
+    			attr_dev(div, "class", "portfolio svelte-1prsfd1");
     			add_location(div, file$3, 42, 0, 841);
     		},
     		l: function claim(nodes) {
@@ -2303,7 +2181,7 @@ var app = (function () {
     			t2 = space();
     			create_component(footer.$$.fragment);
     			attr_dev(main, "class", "svelte-3gwvnr");
-    			add_location(main, file$6, 33, 0, 702);
+    			add_location(main, file$6, 33, 0, 701);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2408,7 +2286,7 @@ var app = (function () {
     function instance$6($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("App", slots, []);
-    	let page = navigation.about;
+    	let page = navigation.work;
     	let selectedProject;
 
     	let handleClickNavigation = selected => {

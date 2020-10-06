@@ -30,7 +30,7 @@
 
   .portfolio .back-button:hover > svg path:first-of-type,
   .portfolio .back-button:focus > svg path:first-of-type {
-    fill: #0f0f0f;
+    fill: #f0f0f0;
   }
 
   @media only screen and (max-width: 920px) {
