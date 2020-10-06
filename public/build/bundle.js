@@ -397,8 +397,8 @@ var app = (function () {
     }
 
     const navigation = {
-      about: "ABOUT",
       work: "WORK",
+      about: "ABOUT",
     };
 
     const projects = [
