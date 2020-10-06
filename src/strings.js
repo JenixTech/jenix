@@ -17,6 +17,15 @@ export const projects = [
   },
 ];
 
+export const staff = [
+  {
+    name: "Will Nixon",
+    title: "Co-Founder",
+    about: "Will is a Software Engineer experienced in full-stack and mobile development. He is passionate about building technology that improves the lives of others and has built applications for a variety of Government and Non-profit organizations",
+    image: 'will-nixon'
+  }
+];
+
 export const links = {
   twitter: { label: "TWITTER", url: "https://twitter.com/jenixtech" },
   instagram: { label: "INSTAGRAM", url: "https://www.instagram.com/jenixtech" },

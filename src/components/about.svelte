@@ -38,28 +38,9 @@
 
 <div class="about">
   <div>
-    <p>We're Jenix</p>
     <p>
-      I'm a Software Engineer experienced in full-stack and mobile development.
-    </p>
-    <p>
-      I currently live in Chicago, Illinois, with my wife and dog, and work for
-      Blue Raster utilizing Esri's ArcGIS technology to build solutions for
-      non-profit, government, and commercial organizations.
-    </p>
-    <p>
-      Since joining the Blue Raster team, my work has been demoed in front of
-      thousands of users at Esri's User Conference 2019, I've developed Azure
-      solutions for nationally recognized companies, and solved 2 year old
-      problems for one of our longest-standing clients. I may not be able to
-      mention them here, but I'm not aversed to a name-drop or two should you
-      decide to reach out!
-    </p>
-    <p>
-      Outside of my day-to-day, I am the developer and co-founder of Jenix
-      Technologies LTD - a software development company focused on iOS and
-      Android development. Lemmi, our flagship application, is slated for
-      release in Q4 2020.
+      We are Jenix, a UK-based software company developing Android and iOS
+      applications.
     </p>
   </div>
   <a href={about.email.url} target="_blank">{about.email.label}</a>
