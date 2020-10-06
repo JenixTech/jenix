@@ -1772,58 +1772,30 @@ var app = (function () {
     function create_fragment$4(ctx) {
     	let div1;
     	let div0;
-    	let p0;
+    	let p;
     	let t1;
-    	let p1;
-    	let t3;
-    	let p2;
-    	let t5;
-    	let p3;
-    	let t7;
-    	let p4;
-    	let t9;
     	let a;
-    	let t10_value = about.email.label + "";
-    	let t10;
+    	let t2_value = about.email.label + "";
+    	let t2;
     	let a_href_value;
 
     	const block = {
     		c: function create() {
     			div1 = element("div");
     			div0 = element("div");
-    			p0 = element("p");
-    			p0.textContent = "We're Jenix";
+    			p = element("p");
+    			p.textContent = "We are Jenix, a UK-based software company developing Android and iOS\n      applications.";
     			t1 = space();
-    			p1 = element("p");
-    			p1.textContent = "I'm a Software Engineer experienced in full-stack and mobile development.";
-    			t3 = space();
-    			p2 = element("p");
-    			p2.textContent = "I currently live in Chicago, Illinois, with my wife and dog, and work for\n      Blue Raster utilizing Esri's ArcGIS technology to build solutions for\n      non-profit, government, and commercial organizations.";
-    			t5 = space();
-    			p3 = element("p");
-    			p3.textContent = "Since joining the Blue Raster team, my work has been demoed in front of\n      thousands of users at Esri's User Conference 2019, I've developed Azure\n      solutions for nationally recognized companies, and solved 2 year old\n      problems for one of our longest-standing clients. I may not be able to\n      mention them here, but I'm not aversed to a name-drop or two should you\n      decide to reach out!";
-    			t7 = space();
-    			p4 = element("p");
-    			p4.textContent = "Outside of my day-to-day, I am the developer and co-founder of Jenix\n      Technologies LTD - a software development company focused on iOS and\n      Android development. Lemmi, our flagship application, is slated for\n      release in Q4 2020.";
-    			t9 = space();
     			a = element("a");
-    			t10 = text(t10_value);
-    			attr_dev(p0, "class", "svelte-qmdiof");
-    			add_location(p0, file$4, 40, 4, 633);
-    			attr_dev(p1, "class", "svelte-qmdiof");
-    			add_location(p1, file$4, 41, 4, 656);
-    			attr_dev(p2, "class", "svelte-qmdiof");
-    			add_location(p2, file$4, 44, 4, 753);
-    			attr_dev(p3, "class", "svelte-qmdiof");
-    			add_location(p3, file$4, 49, 4, 986);
-    			attr_dev(p4, "class", "svelte-qmdiof");
-    			add_location(p4, file$4, 57, 4, 1416);
+    			t2 = text(t2_value);
+    			attr_dev(p, "class", "svelte-qmdiof");
+    			add_location(p, file$4, 40, 4, 633);
     			attr_dev(div0, "class", "svelte-qmdiof");
     			add_location(div0, file$4, 39, 2, 623);
     			attr_dev(a, "href", a_href_value = about.email.url);
     			attr_dev(a, "target", "_blank");
     			attr_dev(a, "class", "svelte-qmdiof");
-    			add_location(a, file$4, 64, 2, 1690);
+    			add_location(a, file$4, 45, 2, 752);
     			attr_dev(div1, "class", "about svelte-qmdiof");
     			add_location(div1, file$4, 38, 0, 601);
     		},
@@ -1833,18 +1805,10 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
     			append_dev(div1, div0);
-    			append_dev(div0, p0);
-    			append_dev(div0, t1);
-    			append_dev(div0, p1);
-    			append_dev(div0, t3);
-    			append_dev(div0, p2);
-    			append_dev(div0, t5);
-    			append_dev(div0, p3);
-    			append_dev(div0, t7);
-    			append_dev(div0, p4);
-    			append_dev(div1, t9);
+    			append_dev(div0, p);
+    			append_dev(div1, t1);
     			append_dev(div1, a);
-    			append_dev(a, t10);
+    			append_dev(a, t2);
     		},
     		p: noop,
     		i: noop,
@@ -1903,7 +1867,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (32:4) {#each Object.keys(links) as link}
+    // (54:6) {#each Object.keys(links) as link}
     function create_each_block$3(ctx) {
     	let a;
     	let t_value = links[/*link*/ ctx[0]].label + "";
@@ -1916,8 +1880,8 @@ var app = (function () {
     			t = text(t_value);
     			attr_dev(a, "href", a_href_value = links[/*link*/ ctx[0]].url);
     			attr_dev(a, "target", "_blank");
-    			attr_dev(a, "class", "svelte-1ou1vq0");
-    			add_location(a, file$5, 32, 6, 569);
+    			attr_dev(a, "class", "svelte-phwzze");
+    			add_location(a, file$5, 54, 8, 1013);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -1933,7 +1897,7 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(32:4) {#each Object.keys(links) as link}",
+    		source: "(54:6) {#each Object.keys(links) as link}",
     		ctx
     	});
 
@@ -1942,7 +1906,11 @@ var app = (function () {
 
     function create_fragment$5(ctx) {
     	let footer;
-    	let div;
+    	let div2;
+    	let div0;
+    	let p;
+    	let t1;
+    	let div1;
     	let each_value = Object.keys(links);
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -1954,26 +1922,40 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			footer = element("footer");
-    			div = element("div");
+    			div2 = element("div");
+    			div0 = element("div");
+    			p = element("p");
+    			p.textContent = "© 2020 Jenix Technologies, LTD. All Rights Reserved";
+    			t1 = space();
+    			div1 = element("div");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "social-wrapper svelte-1ou1vq0");
-    			add_location(div, file$5, 30, 2, 495);
-    			attr_dev(footer, "class", "svelte-1ou1vq0");
-    			add_location(footer, file$5, 29, 0, 484);
+    			add_location(p, file$5, 50, 6, 856);
+    			attr_dev(div0, "class", "copywrite svelte-phwzze");
+    			add_location(div0, file$5, 49, 4, 826);
+    			attr_dev(div1, "class", "social-wrapper svelte-phwzze");
+    			add_location(div1, file$5, 52, 4, 935);
+    			attr_dev(div2, "class", "footer-content svelte-phwzze");
+    			add_location(div2, file$5, 48, 2, 793);
+    			attr_dev(footer, "class", "svelte-phwzze");
+    			add_location(footer, file$5, 47, 0, 782);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, footer, anchor);
-    			append_dev(footer, div);
+    			append_dev(footer, div2);
+    			append_dev(div2, div0);
+    			append_dev(div0, p);
+    			append_dev(div2, t1);
+    			append_dev(div2, div1);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(div, null);
+    				each_blocks[i].m(div1, null);
     			}
     		},
     		p: function update(ctx, [dirty]) {
@@ -1990,7 +1972,7 @@ var app = (function () {
     					} else {
     						each_blocks[i] = create_each_block$3(child_ctx);
     						each_blocks[i].c();
-    						each_blocks[i].m(div, null);
+    						each_blocks[i].m(div1, null);
     					}
     				}
 
