@@ -21,7 +21,7 @@ export const staff = [
   {
     name: "Will Nixon",
     title: "Co-Founder",
-    about: "Will is a Software Engineer experienced in full-stack and mobile development. He is passionate about building technology that improves the lives of others and has built applications for a variety of Government and Non-profit organizations",
+    about: "Will is a software engineer experienced in developing full-stack and mobile applications. He is passionate about building technology that improves the lives of others and has helped create applications for government and non-profit organizations.",
     image: 'will-nixon'
   }
 ];

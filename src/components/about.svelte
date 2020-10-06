@@ -1,5 +1,6 @@
 <script>
-  import { about } from "../strings.js";
+  import { about, staff } from "../strings.js";
+  import StaffProfile from "./staff-profile.svelte";
 </script>
 
 <style>
@@ -9,13 +10,15 @@
     position: relative;
     margin: 0 auto;
   }
+
+  .about-tagline {
+    font-size: 26px;
+    text-align: center;
+  }
   .about div {
     margin-bottom: 80px;
   }
-  .about p {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
+
   .about a {
     background: #f0f0f0;
     color: #0f0f0f;
@@ -37,11 +40,14 @@
 </style>
 
 <div class="about">
-  <div>
-    <p>
-      We are Jenix, a UK-based software company developing Android and iOS
-      applications.
-    </p>
+  <div class="about-tagline">
+    <p>We create.</p>
   </div>
+  <div>
+    {#each staff as { name, title, about, image }, index}
+      <StaffProfile {name} {title} {about} {image} reversed={index % 2 == 0} />
+    {/each}
+  </div>
+
   <a href={about.email.url} target="_blank">{about.email.label}</a>
 </div>
