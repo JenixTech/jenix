@@ -31,12 +31,6 @@
   .about a:active {
     background: #d1d1d1;
   }
-
-  .certification-badge {
-    height: 100px;
-    width: auto;
-    margin-top: 5px;
-  }
 </style>
 
 <div class="about">

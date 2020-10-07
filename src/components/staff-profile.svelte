@@ -29,6 +29,15 @@
   .staff-title {
     font-size: 16px;
   }
+
+  @media only screen and (max-width: 545px) {
+    .staff-profile {
+      flex-direction: column;
+    }
+    .staff-image {
+      margin-bottom: 20px;
+    }
+  }
 </style>
 
 <div class="staff-profile {reversed ? 'reversed' : ''}">

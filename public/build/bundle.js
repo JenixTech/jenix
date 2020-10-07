@@ -1810,20 +1810,20 @@ var app = (function () {
     			t4 = space();
     			p2 = element("p");
     			t5 = text(/*about*/ ctx[2]);
-    			attr_dev(img, "class", "staff-image svelte-18hr415");
+    			attr_dev(img, "class", "staff-image svelte-1tvp4mv");
     			if (img.src !== (img_src_value = `images/${/*image*/ ctx[3]}.jpg`)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = `${/*name*/ ctx[0]} image`);
-    			add_location(img, file$4, 34, 2, 489);
-    			attr_dev(p0, "class", "staff-name svelte-18hr415");
-    			add_location(p0, file$4, 36, 4, 604);
-    			attr_dev(p1, "class", "staff-title svelte-18hr415");
-    			add_location(p1, file$4, 37, 4, 641);
-    			attr_dev(p2, "class", "staff-about svelte-18hr415");
-    			add_location(p2, file$4, 38, 4, 680);
+    			add_location(img, file$4, 43, 2, 649);
+    			attr_dev(p0, "class", "staff-name svelte-1tvp4mv");
+    			add_location(p0, file$4, 45, 4, 764);
+    			attr_dev(p1, "class", "staff-title svelte-1tvp4mv");
+    			add_location(p1, file$4, 46, 4, 801);
+    			attr_dev(p2, "class", "staff-about svelte-1tvp4mv");
+    			add_location(p2, file$4, 47, 4, 840);
     			attr_dev(div0, "class", "staff-desciption");
-    			add_location(div0, file$4, 35, 2, 569);
-    			attr_dev(div1, "class", div1_class_value = "staff-profile " + (/*reversed*/ ctx[4] ? "reversed" : "") + " svelte-18hr415");
-    			add_location(div1, file$4, 33, 0, 430);
+    			add_location(div0, file$4, 44, 2, 729);
+    			attr_dev(div1, "class", div1_class_value = "staff-profile " + (/*reversed*/ ctx[4] ? "reversed" : "") + " svelte-1tvp4mv");
+    			add_location(div1, file$4, 42, 0, 590);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1855,7 +1855,7 @@ var app = (function () {
     			if (dirty & /*title*/ 2) set_data_dev(t3, /*title*/ ctx[1]);
     			if (dirty & /*about*/ 4) set_data_dev(t5, /*about*/ ctx[2]);
 
-    			if (dirty & /*reversed*/ 16 && div1_class_value !== (div1_class_value = "staff-profile " + (/*reversed*/ ctx[4] ? "reversed" : "") + " svelte-18hr415")) {
+    			if (dirty & /*reversed*/ 16 && div1_class_value !== (div1_class_value = "staff-profile " + (/*reversed*/ ctx[4] ? "reversed" : "") + " svelte-1tvp4mv")) {
     				attr_dev(div1, "class", div1_class_value);
     			}
     		},
@@ -2013,7 +2013,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (47:4) {#each staff as { name, title, about, image }
+    // (41:4) {#each staff as { name, title, about, image }
     function create_each_block$3(ctx) {
     	let staffprofile;
     	let current;
@@ -2056,7 +2056,7 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(47:4) {#each staff as { name, title, about, image }",
+    		source: "(41:4) {#each staff as { name, title, about, image }",
     		ctx
     	});
 
@@ -2103,17 +2103,17 @@ var app = (function () {
     			t2 = space();
     			a = element("a");
     			t3 = text(t3_value);
-    			add_location(p, file$5, 43, 4, 722);
-    			attr_dev(div0, "class", "about-tagline svelte-1iwx72t");
-    			add_location(div0, file$5, 42, 2, 690);
-    			attr_dev(div1, "class", "svelte-1iwx72t");
-    			add_location(div1, file$5, 45, 2, 751);
+    			add_location(p, file$5, 37, 4, 635);
+    			attr_dev(div0, "class", "about-tagline svelte-1er5dsm");
+    			add_location(div0, file$5, 36, 2, 603);
+    			attr_dev(div1, "class", "svelte-1er5dsm");
+    			add_location(div1, file$5, 39, 2, 664);
     			attr_dev(a, "href", a_href_value = about.email.url);
     			attr_dev(a, "target", "_blank");
-    			attr_dev(a, "class", "svelte-1iwx72t");
-    			add_location(a, file$5, 51, 2, 919);
-    			attr_dev(div2, "class", "about svelte-1iwx72t");
-    			add_location(div2, file$5, 41, 0, 668);
+    			attr_dev(a, "class", "svelte-1er5dsm");
+    			add_location(a, file$5, 45, 2, 832);
+    			attr_dev(div2, "class", "about svelte-1er5dsm");
+    			add_location(div2, file$5, 35, 0, 581);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2236,7 +2236,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (54:6) {#each Object.keys(links) as link}
+    // (57:6) {#each Object.keys(links) as link}
     function create_each_block$4(ctx) {
     	let a;
     	let t_value = links[/*link*/ ctx[0]].label + "";
@@ -2249,8 +2249,8 @@ var app = (function () {
     			t = text(t_value);
     			attr_dev(a, "href", a_href_value = links[/*link*/ ctx[0]].url);
     			attr_dev(a, "target", "_blank");
-    			attr_dev(a, "class", "svelte-phwzze");
-    			add_location(a, file$6, 54, 8, 1013);
+    			attr_dev(a, "class", "svelte-p1ugui");
+    			add_location(a, file$6, 57, 8, 1079);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -2266,7 +2266,7 @@ var app = (function () {
     		block,
     		id: create_each_block$4.name,
     		type: "each",
-    		source: "(54:6) {#each Object.keys(links) as link}",
+    		source: "(57:6) {#each Object.keys(links) as link}",
     		ctx
     	});
 
@@ -2302,15 +2302,15 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$6, 50, 6, 856);
-    			attr_dev(div0, "class", "copywrite svelte-phwzze");
-    			add_location(div0, file$6, 49, 4, 826);
-    			attr_dev(div1, "class", "social-wrapper svelte-phwzze");
-    			add_location(div1, file$6, 52, 4, 935);
-    			attr_dev(div2, "class", "footer-content svelte-phwzze");
-    			add_location(div2, file$6, 48, 2, 793);
-    			attr_dev(footer, "class", "svelte-phwzze");
-    			add_location(footer, file$6, 47, 0, 782);
+    			add_location(p, file$6, 53, 6, 922);
+    			attr_dev(div0, "class", "copywrite svelte-p1ugui");
+    			add_location(div0, file$6, 52, 4, 892);
+    			attr_dev(div1, "class", "social-wrapper svelte-p1ugui");
+    			add_location(div1, file$6, 55, 4, 1001);
+    			attr_dev(div2, "class", "footer-content svelte-p1ugui");
+    			add_location(div2, file$6, 51, 2, 859);
+    			attr_dev(footer, "class", "svelte-p1ugui");
+    			add_location(footer, file$6, 50, 0, 848);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

@@ -42,6 +42,9 @@
     footer {
       padding: 80px 0px 60px 00px;
     }
+    .footer-content {
+      flex-direction: column-reverse;
+    }
   }
 </style>
 
