@@ -3,12 +3,12 @@
   export let title;
   export let about;
   export let image;
-  export let reversed;
 </script>
 
 <style>
   .staff-profile {
     display: flex;
+    margin-bottom: 40px;
   }
   .staff-image {
     width: 135px;
@@ -35,12 +35,12 @@
       flex-direction: column;
     }
     .staff-image {
-      margin-bottom: 20px;
+      margin: 0 auto 20px auto;
     }
   }
 </style>
 
-<div class="staff-profile {reversed ? 'reversed' : ''}">
+<div class="staff-profile">
   <img class="staff-image" src={`images/${image}.jpg`} alt={`${name} image`} />
   <div class="staff-desciption">
     <p class="staff-name">{name}</p>

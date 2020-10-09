@@ -12,7 +12,7 @@
   }
 
   .about-tagline {
-    font-size: 26px;
+    font-size: 18px;
     text-align: center;
   }
   .about div {
@@ -31,15 +31,65 @@
   .about a:active {
     background: #d1d1d1;
   }
+
+  .about-cards-wrapper {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+  }
+
+  .about-card {
+    text-align: center;
+    width: 45%;
+  }
+
+  .about-card-title {
+    font-size: 32px;
+  }
+
+  .about-card-text {
+    font-size: 18px;
+  }
+
+  .about-staff-title {
+    font-size: 28px;
+  }
+
+  @media only screen and (max-width: 545px) {
+    .about-cards-wrapper {
+      flex-direction: row;
+    }
+
+    .about-card {
+      width: 100%;
+      margin-bottom: 30px !important;
+    }
+
+    .about-staff {
+      text-align: center;
+    }
+  }
 </style>
 
 <div class="about">
   <div class="about-tagline">
-    <p>We create.</p>
+    <p>
+      Founded in June 2020, Jenix is a trusted software development company,
+      based in the UK, building iOS and Android applicaions.
+    </p>
   </div>
-  <div>
+  <div class="about-cards-wrapper">
+    {#each about.cards as { title, text }}
+      <div class="about-card">
+        <p class="about-card-title">{title}</p>
+        <p class="about-card-text">{text}</p>
+      </div>
+    {/each}
+  </div>
+  <div class="about-staff">
+    <p class="about-staff-title">Our Team</p>
     {#each staff as { name, title, about, image }, index}
-      <StaffProfile {name} {title} {about} {image} reversed={index % 2 == 0} />
+      <StaffProfile {name} {title} {about} {image} />
     {/each}
   </div>
 
