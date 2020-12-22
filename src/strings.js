@@ -1,22 +1,54 @@
 export const pages = {
-  about: 'About',
-  contact: 'Contact'
+  about: "About",
+  contact: "Contact"
 }
 
 export const home = {
-  projects: [
+  intro: {
+    text: "Software development from first idea to viable product",
+    list: ["Idea development" , "UX design", "Competitive pricing", "In-house developer", "Quick turnaround"]
+  },
+  fiveSteps: [
     {
-      title: "Lemmi",
-      description: "An Android and iOS app that helps people with speech difficulties communicate with ease, and re-connect with others. Initially developed for the web, then converted to a hybrid application using Apache Cordova, I ported Lemmi to native SDKs to improve performance and make use of APIs not accessible otherwise. (Launching Q3 2020)",
-      webImage: "lemmi-web",
-      mobileImage: "lemmi-mobile",
-      links: {
-        "Website": "https://www.lemmichat.com",
-        // "App Store": ""
-        // "Play Store": ""
-      }
-    },
-  ]
+      title: "Idea",
+      text: "You first thoughts",
+      image: "images/lightbulb.svg"
+    }, {
+      title: "Design",
+      text: "UX ideas take shape",
+      image: "images/phone.svg"
+    }, {
+      title: "Build",
+      text: "Idea becomes reality",
+      image: "images/cogs.svg"
+    }, {
+      title: "Text",
+      text: "Internal + external testing",
+      image: "images/checklist.svg"
+    }, {
+      title: "Publish",
+      text: "Launch on app stores",
+      image: "images/globe.svg"
+    }
+  ],
+  tech: {
+    text: "We use the most trusted technologies to ensure our products stay on the cutting edge.",
+    icons: [
+      "images/swift.svg",
+      "images/kotlin.svg",
+      "images/react.svg",
+      "images/svelte.svg",
+      "images/next.svg",
+      "images/tailwind.svg",
+      "images/azure.svg",
+      "images/aws.svg",
+    ]
+  } ,
+  contact: {
+    title: "Start your journey today",
+    text: "Get in touch with us to see how we can make your ideas a reality",
+    button: "Contact us"
+  }
 }
 
 export const staff = [
@@ -30,7 +62,7 @@ export const staff = [
     name: "Will Nixon",
     title: "Co-Founder",
     about: "Will is a software engineer experienced in developing full-stack and mobile applications. He is passionate about building technology that improves the lives of others and has created applications for government and non-profit organizations across the world.",
-    image: 'will-nixon'
+    image: "will-nixon"
   }
 ];
 

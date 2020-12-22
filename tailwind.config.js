@@ -21,7 +21,8 @@ module.exports = {
       darkSecondary: '#161C22',
       light: '#FCFCFC',
       lightSecondary: '#EDEDED',
-      accent: '#14AEAC'
+      accent: '#14AEAC',
+      lemmi: '#ABE0E8'
     }
-  }
+  },
 };

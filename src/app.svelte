@@ -22,11 +22,9 @@
 </script>
 
 <Header {page} {handleClickNavigation} />
-<div class="max-w-7xl mx-auto">
-  <main>
-    <svelte:component this={components[page]} {handleClickNavigation} />
-  </main>
-</div>
+<main>
+  <svelte:component this={components[page]} {handleClickNavigation} />
+</main>
 <Footer />
 
 <style global lang="postcss">

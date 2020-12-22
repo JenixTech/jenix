@@ -32,7 +32,7 @@
   }
 </script>
 
-<footer class="text-dark dark:text-light h-46 bg-lightSecondary dark:bg-darkSecondary">
+<footer class="text-light h-46 py-5 bg-darkSecondary">
   <div class="flex flex-col items-center justify-center p-4 text-center">
     <div class="">
       <p class="">{newsletter.heading}</p>
@@ -42,10 +42,10 @@
       {#if newsletterMsg && !newsletterSuccess}
         <p class="">{newsletterMsg}</p>
       {/if}
-      <div class="my-4 flex flex-col md:flex-row justify-center">
+      <div class="my-4 flex flex-col md:flex-row justify-center items-center">
         <input
           id="newletter"
-          class="mb-4 md:mb-0 md:mr-4 h-9 w-46 md:w-80 px-2 text-gray-900 bg-lightSecondary"
+          class="mb-4 md:mb-0 md:mr-4 h-10 w-60 sm:w-80 px-2 text-gray-900 bg-light"
           name="newletter"
           type="email"
           placeholder="EMAIL ADDRESS"
@@ -53,7 +53,7 @@
           required
           bind:value={email}
           on:input={onInputChange} />
-        <button id="submit" class="bg-accent px-2 rounded hover:opacity-80" on:click={handleSubmit}>
+        <button id="submit" class="bg-accent px-2 rounded hover:opacity-80 h-10 w-40 md:w-32 mx-0" on:click={handleSubmit}>
           {newsletter.button.toUpperCase()}
         </button>
       </div>
@@ -73,7 +73,7 @@
         <img class="w-8 mx-2 hover:opacity-80" src="images/instagram.svg" alt="social-icon" />
       </a>
     </div>
-    <div class="flex justify-center items-center text-xs text-dark dark:text-light">
+    <div class="flex justify-center items-center text-xs text-light">
         <p>&copy; 2020 Jenix Technologies LTD</p>
     </div>
   </div>
