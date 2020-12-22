@@ -1,21 +1,23 @@
-export const navigation = {
-  work: "WORK",
-  about: "ABOUT",
+export const pages = {
+  about: 'About',
+  contact: 'Contact'
 }
 
-export const projects = [
-  {
-    title: "Lemmi",
-    description: "An Android and iOS app that helps people with speech difficulties communicate with ease, and re-connect with others. Initially developed for the web, then converted to a hybrid application using Apache Cordova, I ported Lemmi to native SDKs to improve performance and make use of APIs not accessible otherwise. (Launching Q3 2020)",
-    webImage: "lemmi-web",
-    mobileImage: "lemmi-mobile",
-    links: {
-      "Website": "https://www.lemmichat.com",
-      // "App Store": ""
-      // "Play Store": ""
-    }
-  },
-];
+export const home = {
+  projects: [
+    {
+      title: "Lemmi",
+      description: "An Android and iOS app that helps people with speech difficulties communicate with ease, and re-connect with others. Initially developed for the web, then converted to a hybrid application using Apache Cordova, I ported Lemmi to native SDKs to improve performance and make use of APIs not accessible otherwise. (Launching Q3 2020)",
+      webImage: "lemmi-web",
+      mobileImage: "lemmi-mobile",
+      links: {
+        "Website": "https://www.lemmichat.com",
+        // "App Store": ""
+        // "Play Store": ""
+      }
+    },
+  ]
+}
 
 export const staff = [
   {
@@ -32,22 +34,18 @@ export const staff = [
   }
 ];
 
-export const links = {
-  twitter: { label: "TWITTER", url: "https://twitter.com/jenixtech" },
-  instagram: { label: "INSTAGRAM", url: "https://www.instagram.com/jenixtech" },
-  facebook: { label: "FACEBOOK", url: "https://www.facebook.com/jenixtech" }
+export const actions = {
+  newsletter: {
+    heading: "Keep up to date with Jenix's latest updates",
+    button: "Subscribe",
+    success: "You have been successfully subscribed!",
+    error: "Something went wrong - please check your email and try again. If you continue to have difficulties, please reach out on our contact page."
+  }
 };
 
-export const about = {
-  email: { label: "Contact Us", url: "mailto:info@jenixtech.com?subject='Contact from Website'" },
-  cards: [{
-    title: "Our Mission",
-    text: "To create cutting edge applications that improve the lives of each and every user."
-  }, {
-    title: "Our Values",
-    text: "We are proud problem solvers committed to: working with integrity, designing with boldness, and providing positive consumer experiences."
-  }, {
-    title: "Our Promise",
-    text: "To provide thoughtful solutions to complex problems using innovative ideas, responsive designs, and our technical expertise."
-  }]
-}
+export const links = {
+  email: "mailto:info@jenixtech.com?subject=New Contact from Website",
+  twitter: "https://twitter.com/jenixtech",
+  instagram: "https://www.instagram.com/jenixtech",
+  facebook: "https://www.facebook.com/jenixtech"
+};

@@ -1,43 +1,42 @@
 <script>
   import Header from "./components/header.svelte";
-  import Portfolio from "./components/portfolio.svelte";
-  import About from "./components/about.svelte";
   import Footer from "./components/footer.svelte";
-  import { navigation } from "./strings.js";
+  import Home from "./pages/home.svelte";
+  import Contact from "./pages/contact.svelte";
+  import About from "./pages/about.svelte";
+  import { pages } from "./strings";
 
-  let page = navigation.work;
-  let selectedProject;
+  const components = {
+    [pages.home]: Home,
+    [pages.about]: About,
+    [pages.contact]: Contact
+  };
 
-  let handleClickNavigation = (selected) => {
+  let page = pages.home;
+  let handleClickNavigation = (selected, scrollToTop = false) => {
     page = selected;
-    selectedProject = null;
-  };
-
-  let handleClickProject = (selected) => {
-    selectedProject = selected;
-  };
-
-  let handleClickHome = () => {
-    page = navigation.work;
-    selectedProject = null;
+    if (scrollToTop) {
+      window.scrollTo(0,0);
+    }
   };
 </script>
 
-<style>
-  main {
-    max-width: 1300px;
-    margin: 0 auto;
-    text-align: center;
-  }
+<Header {page} {handleClickNavigation} />
+<div class="max-w-7xl mx-auto">
+  <main>
+    <svelte:component this={components[page]} {handleClickNavigation} />
+  </main>
+</div>
+<Footer />
+
+<style global lang="postcss">
+  /* only apply purgecss on utilities, per Tailwind docs */
+  /* purgecss start ignore */
+  @tailwind base;
+  @tailwind components;
+  /* purgecss end ignore */
+
+  @tailwind utilities;
 </style>
 
-<main>
-  <Header {page} {handleClickNavigation} {handleClickHome} />
-  {#if page === navigation.work}
-    <Portfolio {selectedProject} {handleClickProject} {handleClickNavigation} />
-  {/if}
-  {#if page === navigation.about}
-    <About {handleClickNavigation} />
-  {/if}
-  <Footer />
-</main>
+  
