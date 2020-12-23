@@ -1,5 +1,5 @@
 <script>
-  import { actions, links } from "../strings.js";
+  import { actions, links } from "../strings";
   const { newsletter } = actions;
   let email;
   let successMsg = newsletter.success;

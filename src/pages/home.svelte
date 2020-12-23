@@ -1,7 +1,9 @@
 <script>
   import Lemmi from '../components/lemmi.svelte';
-  import { home, links } from '../strings.js';
+  import { home, links, pages } from '../strings';
   const { intro, fiveSteps, tech, contact } = home;
+
+  export let handleClickNavigation;
 </script>
 
 <section class="h-64 md:h-52 bg-accent">
@@ -59,7 +61,12 @@
     <div class="mt-10 sm:m-0">
       <p class="text-xl font-semibold mb-3 sm:mb-2">{contact.title}</p>
       <p class="text-sm mb-10 sm:mb-7">{contact.text}</p>
-      <a class="bg-dark py-2 px-3 text-light rounded hover:opacity-80" href={links.email}>{contact.button}</a>
+      <button
+        on:click={() => handleClickNavigation(pages.contact)}
+        class="bg-dark py-2 px-3 text-light rounded hover:opacity-80"
+      >
+        {contact.button}
+      </button>
     </div>
   </div>
 </section>

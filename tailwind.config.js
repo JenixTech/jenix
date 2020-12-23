@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 const production = !process.env.ROLLUP_WATCH; // or some other env var like NODE_ENV
 module.exports = {
   darkMode: 'media',
@@ -22,7 +24,9 @@ module.exports = {
       light: '#FCFCFC',
       lightSecondary: '#EDEDED',
       accent: '#14AEAC',
-      lemmi: '#ABE0E8'
+      lemmi: '#ABE0E8',
+      red: colors.red,
+      green: colors.green
     }
   },
 };

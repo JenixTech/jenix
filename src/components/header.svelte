@@ -1,18 +1,23 @@
 <script>
-  import { pages } from "../strings.js";
+  import { pages } from "../strings";
   export let page;
   export let handleClickNavigation;
 </script>
 <!-- src={window.matchMedia('(prefers-color-scheme: dark)').matches ? 'images/logo-white.png' : 'images/logo-black.png'} -->
 <nav class="h-36 sm:h-16 py-4 sm:py-0 bg-darkSecondary">
   <div class="flex flex-col sm:flex-row items-center justify-between max-w-7xl mx-auto px-6 sm:px10 md:px-20 xl:px-0 h-full">
-    <img class="w-52 sm:w-40" src="images/logo-white.png" alt="Jenix Tech Logo" />
+    <img 
+      class="w-52 sm:w-40 cursor-pointer" 
+      src="images/logo-white.png" 
+      alt="Jenix Tech Logo"
+      on:click={() => handleClickNavigation(pages.home)}
+    />
     <ul class="flex w-36 sm:w-28 md:w-36 justify-between">
       {#each Object.values(pages) as pageTitle}
         <li>
           <button
             on:click={() => handleClickNavigation(pageTitle)}
-            class="hover:text-accent text-light"
+            class="hover:text-accent text-light {page === pageTitle ? 'text-accent' : 'text-light'}"
           >{pageTitle}</button>
         </li>
         <!-- class={`${page === pageTitle ? 'text-gray-100' : ''} hover:text-gray-100`} -->

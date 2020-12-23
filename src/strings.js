@@ -51,20 +51,59 @@ export const home = {
   }
 }
 
-export const staff = [
-  {
-    name: "Jemma Bowles",
-    title: "Co-Founder",
-    about: "Jemma is a serial entrepreneur experienced in all aspects of business formation, strategy and operations. She is an innovative product developer, that uses her creativity and problem solving skills to generate new enterprising business ideas. Her passion is to drive these ideas into existence, by creating successful business ventures that can then help others.",
-    image: "jemma-bowles"
-  },
-  {
-    name: "Will Nixon",
-    title: "Co-Founder",
-    about: "Will is a software engineer experienced in developing full-stack and mobile applications. He is passionate about building technology that improves the lives of others and has created applications for government and non-profit organizations across the world.",
-    image: "will-nixon"
+export const about = {
+  paragraphs: [
+    'Founded in 2020, Jenix Technologies is a full-stack and mobile app development company based in the UK.',
+    'Out boutique-in-house team includes a full-time designer, software developer, and a specialist marketing and PR consultant.',
+    'Unlike larger enterprises, we take on fewer projects, allowing us the time to get to know and fully understand your idea and vision, so we can fully support you with conceptual challends, all the way through the design, development, and launch cycles.',
+    'We approach every project differently on account of your needs, to ensure we work in the most effiecient way for your time and resources whilst maintaining the highest quality results.',
+  ],
+  staffs: [
+    {
+      name: "Jemma Bowles",
+      title: "Co-Founder",
+      about: "Jemma is experienced in all aspects of business strategy, operations, and design.",
+      image: "images/jemma-bowles.jpg"
+    },
+    {
+      name: "Will Nixon",
+      title: "Co-Founder",
+      about: "Will is a software engineer experienced in developing full-stack,mobile, and cloud-based applications.",
+      image: "images/will-nixon.jpg"
+    }
+  ],
+  values: [
+    {
+      title: "Our Mission",
+      text: "To use our tools and specialist knowledge to make your ideas a reality.",
+      image: "images/mission.svg"
+    },
+    {
+      title: "Our Values",
+      text: "We work with integrity and always aim to provide a positive customer experience.",
+      image: "images/values.svg"
+    },
+    {
+      title: "Our Promise",
+      text: "To provide solutions to problems with innovative ideas and technical expertise.",
+      image: "images/promise.svg"
+    }
+  ],
+  contact: {
+    title: "Contact us to discusss your ideas",
+    text: "Get in touch with our friendly team",
+    button: "Contact us"
   }
-];
+}
+
+export const contact = {
+  title: "Contact Us",
+  instructions: "See how we can help take you from ideas to reality:",
+  form: "Get in touch",
+  submit: "Submit",
+  success: "Your form has been submitted!",
+  error: "There was an issue submitting your form. Please try again or email as: info@jenixtech.com"
+}
 
 export const actions = {
   newsletter: {
