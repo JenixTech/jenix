@@ -53,7 +53,7 @@
           required
           bind:value={email}
           on:input={onInputChange} />
-        <button id="submit" class="bg-accent px-2 rounded hover:opacity-80 h-10 w-40 md:w-32 mx-0" on:click={handleSubmit}>
+        <button id="submit" class="bg-accent px-2 rounded transition duration-250 ease-in-out transform hover:opacity-80 h-10 w-40 md:w-32 mx-0" on:click={handleSubmit}>
           {newsletter.button.toUpperCase()}
         </button>
       </div>
@@ -61,16 +61,16 @@
     </div>
     <div class="mb-5 flex">
       <a href={links.email} rel="noopener" target="_blank">
-        <img class="w-8 mx-2 hover:opacity-80" src="images/email.svg" alt="social-icon" />
+        <img class="w-8 mx-2 transition duration-250 ease-in-out transform hover:opacity-80" src="images/email.svg" alt="social-icon" />
       </a>
       <a href={links.twitter} rel="noopener" target="_blank">
-        <img class="w-8 mx-2 hover:opacity-80" src="images/twitter.svg" alt="social-icon" />
+        <img class="w-8 mx-2 transition duration-250 ease-in-out transform hover:opacity-80" src="images/twitter.svg" alt="social-icon" />
       </a>
       <a href={links.facebook} rel="noopener" target="_blank">
-        <img class="w-8 mx-2 hover:opacity-80" src="images/facebook.svg" alt="social-icon" />
+        <img class="w-8 mx-2 transition duration-250 ease-in-out transform hover:opacity-80" src="images/facebook.svg" alt="social-icon" />
       </a>
       <a href={links.instagram} rel="noopener" target="_blank">
-        <img class="w-8 mx-2 hover:opacity-80" src="images/instagram.svg" alt="social-icon" />
+        <img class="w-8 mx-2 transition duration-250 ease-in-out transform hover:opacity-80" src="images/instagram.svg" alt="social-icon" />
       </a>
     </div>
     <div class="flex justify-center items-center text-xs text-light">

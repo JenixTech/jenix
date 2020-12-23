@@ -17,10 +17,9 @@
         <li>
           <button
             on:click={() => handleClickNavigation(pageTitle)}
-            class="hover:text-accent text-light {page === pageTitle ? 'text-accent' : 'text-light'}"
+            class="{page === pageTitle ? 'text-accent' : 'text-light'} transition duration-150 ease-in-out transform hover:text-accent"
           >{pageTitle}</button>
         </li>
-        <!-- class={`${page === pageTitle ? 'text-gray-100' : ''} hover:text-gray-100`} -->
       {/each}
     </ul>
   </div>

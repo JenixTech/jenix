@@ -87,6 +87,6 @@
         />
       </div>
     </form>
-    <button class="bg-accent px-4 py-2 text-lightSecondary mt-4 sm:w-40" on:click={handleSubmit}>{contact.submit.toUpperCase()}</button>
+    <button class="bg-accent rounded px-4 py-2 text-lightSecondary mt-4 sm:w-40 shadow-md transition duration-250 ease-in-out transform hover:shadow-inner" on:click={handleSubmit}>{contact.submit.toUpperCase()}</button>
   </div>
 </section>

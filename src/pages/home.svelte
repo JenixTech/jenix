@@ -63,7 +63,7 @@
       <p class="text-sm mb-10 sm:mb-7">{contact.text}</p>
       <button
         on:click={() => handleClickNavigation(pages.contact)}
-        class="bg-dark py-2 px-3 text-light rounded hover:opacity-80"
+        class="bg-dark py-2 px-3 text-light rounded shadow-md transition duration-250 ease-in-out transform hover:shadow-inner"
       >
         {contact.button}
       </button>

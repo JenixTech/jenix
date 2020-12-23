@@ -20,7 +20,7 @@
   <div class="h-full max-w-4xl mx-auto px-6 sm:px10 md:px-20 xl:px-0 flex flex-col sm:flex-row items-center justify-between h-full text-darkSecondary text-center">
     {#each staffs as staff}
       <div class="flex flex-col mb-20 sm:mb-0 mx-5 justify-center items-center w-full">
-        <img class="rounded-lg mb-7 sm:w-44" src={staff.image} alt={staff.name} />
+        <img class="rounded-lg mb-7 sm:w-44 shadow-lg" src={staff.image} alt={staff.name} />
         <p class="font-semibold text-xl sm:text-2xl">{staff.name}</p>
         <p class="text-sm mb-5">{staff.title}</p>
         <p class="text-sm">{staff.about}</p>
@@ -47,7 +47,7 @@
       <p class="text-sm mb-10 sm:mb-7">{contact.text}</p>
       <button
         on:click={() => handleClickNavigation(pages.contact)}
-        class="bg-dark py-2 px-3 text-light rounded hover:opacity-80"
+        class="bg-dark py-2 px-3 text-light rounded shadow-md transition duration-250 ease-in-out transform hover:shadow-inner"
       >
         {contact.button}
       </button>

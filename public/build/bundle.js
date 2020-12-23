@@ -541,9 +541,9 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
 
-    			attr_dev(button, "class", button_class_value = "hover:text-accent text-light " + (/*page*/ ctx[0] === /*pageTitle*/ ctx[4]
+    			attr_dev(button, "class", button_class_value = "" + ((/*page*/ ctx[0] === /*pageTitle*/ ctx[4]
     			? "text-accent"
-    			: "text-light"));
+    			: "text-light") + " transition duration-150 ease-in-out transform hover:text-accent"));
 
     			add_location(button, file, 17, 10, 730);
     			add_location(li, file, 16, 8, 715);
@@ -552,7 +552,7 @@ var app = (function () {
     			insert_dev(target, li, anchor);
     			append_dev(li, button);
     			append_dev(button, t0);
-    			insert_dev(target, t1, anchor);
+    			append_dev(li, t1);
 
     			if (!mounted) {
     				dispose = listen_dev(button, "click", click_handler_1, false, false, false);
@@ -562,15 +562,14 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty & /*page*/ 1 && button_class_value !== (button_class_value = "hover:text-accent text-light " + (/*page*/ ctx[0] === /*pageTitle*/ ctx[4]
+    			if (dirty & /*page*/ 1 && button_class_value !== (button_class_value = "" + ((/*page*/ ctx[0] === /*pageTitle*/ ctx[4]
     			? "text-accent"
-    			: "text-light"))) {
+    			: "text-light") + " transition duration-150 ease-in-out transform hover:text-accent"))) {
     				attr_dev(button, "class", button_class_value);
     			}
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li);
-    			if (detaching) detach_dev(t1);
     			mounted = false;
     			dispose();
     		}
@@ -639,11 +638,11 @@ var app = (function () {
     			attr_dev(nav, "class", "h-36 sm:h-16 py-4 sm:py-0 bg-darkSecondary");
     			add_location(nav, file, 6, 0, 237);
     			attr_dev(h1, "class", "text-2xl md:text-3xl font-bold");
-    			add_location(h1, file, 28, 2, 1206);
+    			add_location(h1, file, 27, 2, 1149);
     			attr_dev(h5, "class", "mt-2 text-sm md:text-base");
-    			add_location(h5, file, 29, 2, 1281);
+    			add_location(h5, file, 28, 2, 1224);
     			attr_dev(header, "class", "text-light h-32 sm:h-40 md:h-32 bg-darkSecondary flex flex-col justify-center items-center text-center px-4");
-    			add_location(header, file, 27, 0, 1079);
+    			add_location(header, file, 26, 0, 1022);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -824,7 +823,7 @@ var app = (function () {
     			input.required = true;
     			add_location(input, file$1, 45, 8, 1433);
     			attr_dev(button, "id", "submit");
-    			attr_dev(button, "class", "bg-accent px-2 rounded hover:opacity-80 h-10 w-40 md:w-32 mx-0");
+    			attr_dev(button, "class", "bg-accent px-2 rounded transition duration-250 ease-in-out transform hover:opacity-80 h-10 w-40 md:w-32 mx-0");
     			add_location(button, file$1, 55, 8, 1774);
     			attr_dev(div, "class", "my-4 flex flex-col md:flex-row justify-center items-center");
     			add_location(div, file$1, 44, 6, 1352);
@@ -1030,43 +1029,43 @@ var app = (function () {
     			add_location(p0, file$1, 37, 6, 1074);
     			attr_dev(div0, "class", "");
     			add_location(div0, file$1, 36, 4, 1053);
-    			attr_dev(img0, "class", "w-8 mx-2 hover:opacity-80");
+    			attr_dev(img0, "class", "w-8 mx-2 transition duration-250 ease-in-out transform hover:opacity-80");
     			if (img0.src !== (img0_src_value = "images/email.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "social-icon");
-    			add_location(img0, file$1, 63, 8, 2084);
+    			add_location(img0, file$1, 63, 8, 2130);
     			attr_dev(a0, "href", a0_href_value = links.email);
     			attr_dev(a0, "rel", "noopener");
     			attr_dev(a0, "target", "_blank");
-    			add_location(a0, file$1, 62, 6, 2022);
-    			attr_dev(img1, "class", "w-8 mx-2 hover:opacity-80");
+    			add_location(a0, file$1, 62, 6, 2068);
+    			attr_dev(img1, "class", "w-8 mx-2 transition duration-250 ease-in-out transform hover:opacity-80");
     			if (img1.src !== (img1_src_value = "images/twitter.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "social-icon");
-    			add_location(img1, file$1, 66, 8, 2248);
+    			add_location(img1, file$1, 66, 8, 2340);
     			attr_dev(a1, "href", a1_href_value = links.twitter);
     			attr_dev(a1, "rel", "noopener");
     			attr_dev(a1, "target", "_blank");
-    			add_location(a1, file$1, 65, 6, 2184);
-    			attr_dev(img2, "class", "w-8 mx-2 hover:opacity-80");
+    			add_location(a1, file$1, 65, 6, 2276);
+    			attr_dev(img2, "class", "w-8 mx-2 transition duration-250 ease-in-out transform hover:opacity-80");
     			if (img2.src !== (img2_src_value = "images/facebook.svg")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "social-icon");
-    			add_location(img2, file$1, 69, 8, 2415);
+    			add_location(img2, file$1, 69, 8, 2553);
     			attr_dev(a2, "href", a2_href_value = links.facebook);
     			attr_dev(a2, "rel", "noopener");
     			attr_dev(a2, "target", "_blank");
-    			add_location(a2, file$1, 68, 6, 2350);
-    			attr_dev(img3, "class", "w-8 mx-2 hover:opacity-80");
+    			add_location(a2, file$1, 68, 6, 2488);
+    			attr_dev(img3, "class", "w-8 mx-2 transition duration-250 ease-in-out transform hover:opacity-80");
     			if (img3.src !== (img3_src_value = "images/instagram.svg")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "alt", "social-icon");
-    			add_location(img3, file$1, 72, 8, 2584);
+    			add_location(img3, file$1, 72, 8, 2768);
     			attr_dev(a3, "href", a3_href_value = links.instagram);
     			attr_dev(a3, "rel", "noopener");
     			attr_dev(a3, "target", "_blank");
-    			add_location(a3, file$1, 71, 6, 2518);
+    			add_location(a3, file$1, 71, 6, 2702);
     			attr_dev(div1, "class", "mb-5 flex");
-    			add_location(div1, file$1, 61, 4, 1992);
-    			add_location(p1, file$1, 76, 8, 2771);
+    			add_location(div1, file$1, 61, 4, 2038);
+    			add_location(p1, file$1, 76, 8, 3001);
     			attr_dev(div2, "class", "flex justify-center items-center text-xs text-light");
-    			add_location(div2, file$1, 75, 4, 2697);
+    			add_location(div2, file$1, 75, 4, 2927);
     			attr_dev(div3, "class", "flex flex-col items-center justify-center p-4 text-center");
     			add_location(div3, file$1, 35, 2, 977);
     			attr_dev(footer, "class", "text-light h-46 py-5 bg-darkSecondary");
@@ -1298,27 +1297,27 @@ var app = (function () {
     			attr_dev(img1, "alt", "Lemmi shown on an iPad and iPhone");
     			add_location(img1, file$2, 13, 4, 456);
     			attr_dev(sup, "class", "text-sm align-top");
-    			add_location(sup, file$2, 19, 117, 728);
+    			add_location(sup, file$2, 19, 163, 774);
     			attr_dev(a, "href", "https://www.lemmichat.com");
     			attr_dev(a, "target", "_blank");
-    			attr_dev(a, "class", "text-3xl font-semibold mb-6 hover:text-accent");
+    			attr_dev(a, "class", "text-3xl font-semibold mb-6 transition duration-250 ease-in-out transform hover:text-accent");
     			add_location(a, file$2, 19, 6, 617);
     			attr_dev(p0, "class", "text-sm sm:text-base mb-4");
-    			add_location(p0, file$2, 20, 6, 777);
+    			add_location(p0, file$2, 20, 6, 823);
     			attr_dev(p1, "class", "text-sm sm:text-base");
-    			add_location(p1, file$2, 21, 6, 886);
+    			add_location(p1, file$2, 21, 6, 932);
     			if (img2.src !== (img2_src_value = "images/app-store.png")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "Download on the App Store");
-    			add_location(img2, file$2, 27, 10, 1327);
-    			attr_dev(button0, "class", "hover:opacity-80 w-28 sm:mr-10");
-    			add_location(button0, file$2, 23, 8, 1206);
+    			add_location(img2, file$2, 27, 10, 1356);
+    			attr_dev(button0, "class", "w-28 sm:mr-10");
+    			add_location(button0, file$2, 23, 8, 1252);
     			if (img3.src !== (img3_src_value = "images/play-store.png")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "alt", "Download on the Play Store");
-    			add_location(img3, file$2, 35, 10, 1557);
-    			attr_dev(button1, "class", "hover:opacity-80 w-32");
-    			add_location(button1, file$2, 31, 8, 1444);
+    			add_location(img3, file$2, 35, 10, 1569);
+    			attr_dev(button1, "class", "w-32");
+    			add_location(button1, file$2, 31, 8, 1473);
     			attr_dev(div0, "class", "mt-10 flex justify-between sm:justify-start");
-    			add_location(div0, file$2, 22, 6, 1140);
+    			add_location(div0, file$2, 22, 6, 1186);
     			attr_dev(div1, "class", "mt-8");
     			add_location(div1, file$2, 18, 4, 592);
     			attr_dev(div2, "class", "max-w-7xl mx-auto sm:px10 md:px-20 xl:px-0 flex flex-col sm:flex-row items-center justify-center h-full");
@@ -1787,7 +1786,7 @@ var app = (function () {
     			add_location(p4, file$3, 61, 6, 2991);
     			attr_dev(p5, "class", "text-sm mb-10 sm:mb-7");
     			add_location(p5, file$3, 62, 6, 3063);
-    			attr_dev(button, "class", "bg-dark py-2 px-3 text-light rounded hover:opacity-80");
+    			attr_dev(button, "class", "bg-dark py-2 px-3 text-light rounded shadow-md transition duration-250 ease-in-out transform hover:shadow-inner");
     			add_location(button, file$3, 63, 6, 3121);
     			attr_dev(div4, "class", "mt-10 sm:m-0");
     			add_location(div4, file$3, 60, 4, 2958);
@@ -2246,7 +2245,7 @@ var app = (function () {
     			add_location(div5, file$4, 79, 6, 2539);
     			attr_dev(form, "id", "contact-form");
     			add_location(form, file$4, 44, 4, 1325);
-    			attr_dev(button, "class", "bg-accent px-4 py-2 text-lightSecondary mt-4 sm:w-40");
+    			attr_dev(button, "class", "bg-accent rounded px-4 py-2 text-lightSecondary mt-4 sm:w-40 shadow-md transition duration-250 ease-in-out transform hover:shadow-inner");
     			add_location(button, file$4, 89, 4, 2837);
     			attr_dev(div6, "class", "max-w-3xl mx-auto px-6 sm:px10 md:px-20 xl:px-0 flex flex-col h-full");
     			add_location(div6, file$4, 33, 2, 929);
@@ -2540,16 +2539,16 @@ var app = (function () {
     			p2 = element("p");
     			t5 = text(t5_value);
     			t6 = space();
-    			attr_dev(img, "class", "rounded-lg mb-7 sm:w-44");
+    			attr_dev(img, "class", "rounded-lg mb-7 sm:w-44 shadow-lg");
     			if (img.src !== (img_src_value = /*staff*/ ctx[10].image)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = /*staff*/ ctx[10].name);
     			add_location(img, file$5, 22, 8, 1084);
     			attr_dev(p0, "class", "font-semibold text-xl sm:text-2xl");
-    			add_location(p0, file$5, 23, 8, 1167);
+    			add_location(p0, file$5, 23, 8, 1177);
     			attr_dev(p1, "class", "text-sm mb-5");
-    			add_location(p1, file$5, 24, 8, 1237);
+    			add_location(p1, file$5, 24, 8, 1247);
     			attr_dev(p2, "class", "text-sm");
-    			add_location(p2, file$5, 25, 8, 1287);
+    			add_location(p2, file$5, 25, 8, 1297);
     			attr_dev(div, "class", "flex flex-col mb-20 sm:mb-0 mx-5 justify-center items-center w-full");
     			add_location(div, file$5, 21, 6, 994);
     		},
@@ -2614,13 +2613,13 @@ var app = (function () {
     			attr_dev(img, "class", "rounded-lg mb-7 w-20 sm:w-16");
     			if (img.src !== (img_src_value = /*value*/ ctx[7].image)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = /*value*/ ctx[7].title);
-    			add_location(img, file$5, 34, 8, 1737);
+    			add_location(img, file$5, 34, 8, 1747);
     			attr_dev(p0, "class", "font-semibold text-xl sm:text-lg");
-    			add_location(p0, file$5, 35, 8, 1826);
+    			add_location(p0, file$5, 35, 8, 1836);
     			attr_dev(p1, "class", "text-sm");
-    			add_location(p1, file$5, 36, 8, 1896);
+    			add_location(p1, file$5, 36, 8, 1906);
     			attr_dev(div, "class", "flex flex-col my-7 sm:my-0 sm:mx-5 justify-between items-center w-full");
-    			add_location(div, file$5, 33, 6, 1644);
+    			add_location(div, file$5, 33, 6, 1654);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2760,25 +2759,25 @@ var app = (function () {
     			attr_dev(section1, "class", "h-auto py-10 flex justify-center items-center bg-lightSecondary");
     			add_location(section1, file$5, 18, 0, 714);
     			attr_dev(div2, "class", "h-full max-w-6xl mx-auto px-6 sm:px10 md:px-20 xl:px-0 flex flex-col sm:flex-row items-center justify-between h-full text-darkSecondary text-center");
-    			add_location(div2, file$5, 31, 2, 1448);
+    			add_location(div2, file$5, 31, 2, 1458);
     			attr_dev(section2, "class", "h-auto py-10 flex justify-center items-center bg-accent");
-    			add_location(section2, file$5, 30, 0, 1372);
+    			add_location(section2, file$5, 30, 0, 1382);
     			attr_dev(img, "class", "w-24 sm:mr-20 sm:-mt-2");
     			if (img.src !== (img_src_value = "images/contact.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = /*contact*/ ctx[3].text);
-    			add_location(img, file$5, 43, 4, 2249);
+    			add_location(img, file$5, 43, 4, 2259);
     			attr_dev(p1, "class", "text-xl font-semibold mb-3 sm:mb-2");
-    			add_location(p1, file$5, 45, 6, 2367);
+    			add_location(p1, file$5, 45, 6, 2377);
     			attr_dev(p2, "class", "text-sm mb-10 sm:mb-7");
-    			add_location(p2, file$5, 46, 6, 2439);
-    			attr_dev(button1, "class", "bg-dark py-2 px-3 text-light rounded hover:opacity-80");
-    			add_location(button1, file$5, 47, 6, 2497);
+    			add_location(p2, file$5, 46, 6, 2449);
+    			attr_dev(button1, "class", "bg-dark py-2 px-3 text-light rounded shadow-md transition duration-250 ease-in-out transform hover:shadow-inner");
+    			add_location(button1, file$5, 47, 6, 2507);
     			attr_dev(div3, "class", "mt-10 sm:m-0");
-    			add_location(div3, file$5, 44, 4, 2334);
+    			add_location(div3, file$5, 44, 4, 2344);
     			attr_dev(div4, "class", "h-full max-w-7xl mx-auto px-6 sm:px10 md:px-20 xl:px-0 flex flex-col sm:flex-row items-center justify-center h-full text-center sm:text-left");
-    			add_location(div4, file$5, 42, 2, 2090);
+    			add_location(div4, file$5, 42, 2, 2100);
     			attr_dev(section3, "class", "h-auto sm:h-56 py-8 flex justify-center items-center bg-lightSecondary text-darkSecondary");
-    			add_location(section3, file$5, 41, 0, 1980);
+    			add_location(section3, file$5, 41, 0, 1990);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3056,7 +3055,7 @@ var app = (function () {
     			if (switch_instance) create_component(switch_instance.$$.fragment);
     			t1 = space();
     			create_component(footer.$$.fragment);
-    			add_location(main, file$6, 24, 0, 620);
+    			add_location(main, file$6, 24, 0, 619);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3145,7 +3144,7 @@ var app = (function () {
     		[pages.contact]: Contact
     	};
 
-    	let page = pages.about;
+    	let page = pages.home;
 
     	let handleClickNavigation = (selected, scrollToTop = false) => {
     		$$invalidate(0, page = selected);
