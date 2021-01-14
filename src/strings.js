@@ -60,7 +60,7 @@ export const about = {
   ],
   staffs: [
     {
-      name: "Jemma Bowles",
+      name: "Jemma Grace",
       title: "Co-Founder",
       about: "Jemma is experienced in all aspects of business strategy, operations, and design.",
       image: "images/jemma-bowles.jpg"
@@ -68,7 +68,7 @@ export const about = {
     {
       name: "Will Nixon",
       title: "Co-Founder",
-      about: "Will is a software engineer experienced in developing full-stack,mobile, and cloud-based applications.",
+      about: "Will is a software engineer experienced in developing full-stack, mobile, and cloud-based applications.",
       image: "images/will-nixon.jpg"
     }
   ],
