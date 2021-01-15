@@ -52,6 +52,9 @@ var app = (function () {
     function space() {
         return text(' ');
     }
+    function empty() {
+        return text('');
+    }
     function listen(node, event, handler, options) {
         node.addEventListener(event, handler, options);
         return () => node.removeEventListener(event, handler, options);
@@ -67,6 +70,9 @@ var app = (function () {
     }
     function set_input_value(input, value) {
         input.value = value == null ? '' : value;
+    }
+    function set_style(node, key, value, important) {
+        node.style.setProperty(key, value, important ? 'important' : '');
     }
     function toggle_class(element, name, toggle) {
         element.classList[toggle ? 'add' : 'remove'](name);
@@ -545,8 +551,8 @@ var app = (function () {
     			? "text-accent"
     			: "text-light") + " transition duration-150 ease-in-out transform hover:text-accent"));
 
-    			add_location(button, file, 17, 10, 730);
-    			add_location(li, file, 16, 8, 715);
+    			add_location(button, file, 17, 10, 732);
+    			add_location(li, file, 16, 8, 717);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -586,6 +592,101 @@ var app = (function () {
     	return block;
     }
 
+    // (35:2) {:else}
+    function create_else_block(ctx) {
+    	let header;
+    	let h1;
+    	let t1;
+    	let h5;
+
+    	const block = {
+    		c: function create() {
+    			header = element("header");
+    			h1 = element("h1");
+    			h1.textContent = "App ideas, come to life.";
+    			t1 = space();
+    			h5 = element("h5");
+    			h5.textContent = "Software company building iOS and Android applications";
+    			attr_dev(h1, "class", "text-2xl md:text-3xl font-bold");
+    			add_location(h1, file, 36, 4, 1723);
+    			attr_dev(h5, "class", "mt-2 text-sm md:text-base");
+    			add_location(h5, file, 37, 4, 1800);
+    			attr_dev(header, "class", "text-light h-32 sm:h-40 md:h-32 bg-darkSecondary flex flex-col justify-center items-center text-center px-4");
+    			add_location(header, file, 35, 2, 1594);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, header, anchor);
+    			append_dev(header, h1);
+    			append_dev(header, t1);
+    			append_dev(header, h5);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(header);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block.name,
+    		type: "else",
+    		source: "(35:2) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (28:0) {#if page === pages.home}
+    function create_if_block(ctx) {
+    	let header;
+    	let div;
+    	let h1;
+    	let t1;
+    	let h5;
+
+    	const block = {
+    		c: function create() {
+    			header = element("header");
+    			div = element("div");
+    			h1 = element("h1");
+    			h1.textContent = "App ideas, come to life.";
+    			t1 = space();
+    			h5 = element("h5");
+    			h5.textContent = "Software company building iOS and Android applications";
+    			attr_dev(h1, "class", "text-2xl md:text-5xl font-bold");
+    			add_location(h1, file, 30, 6, 1384);
+    			attr_dev(h5, "class", "mt-2 text-sm md:text-lg");
+    			add_location(h5, file, 31, 6, 1463);
+    			attr_dev(div, "class", "h-48 sm:h-144 w-full bg-overlay flex flex-col justify-center items-center px-2 sm:px-0");
+    			set_style(div, "--overlay-image", "url('/images/header.jpg')");
+    			set_style(div, "--overlay-colors", "rgba(22, 28, 34, .7), rgba(22, 28, 34, .7)");
+    			add_location(div, file, 29, 4, 1163);
+    			attr_dev(header, "class", "text-light h-full bg-darkSecondary flex flex-col justify-center items-center text-center");
+    			add_location(header, file, 28, 2, 1053);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, header, anchor);
+    			append_dev(header, div);
+    			append_dev(div, h1);
+    			append_dev(div, t1);
+    			append_dev(div, h5);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(header);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(28:0) {#if page === pages.home}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
     function create_fragment(ctx) {
     	let nav;
     	let div;
@@ -593,11 +694,9 @@ var app = (function () {
     	let img_src_value;
     	let t0;
     	let ul;
+    	let nav_class_value;
     	let t1;
-    	let header;
-    	let h1;
-    	let t3;
-    	let h5;
+    	let if_block_anchor;
     	let mounted;
     	let dispose;
     	let each_value = Object.values(pages);
@@ -607,6 +706,14 @@ var app = (function () {
     	for (let i = 0; i < each_value.length; i += 1) {
     		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
     	}
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*page*/ ctx[0] === pages.home) return create_if_block;
+    		return create_else_block;
+    	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block = current_block_type(ctx);
 
     	const block = {
     		c: function create() {
@@ -621,28 +728,18 @@ var app = (function () {
     			}
 
     			t1 = space();
-    			header = element("header");
-    			h1 = element("h1");
-    			h1.textContent = "App ideas, come to life.";
-    			t3 = space();
-    			h5 = element("h5");
-    			h5.textContent = "Software company building iOS and Android applications";
+    			if_block.c();
+    			if_block_anchor = empty();
     			attr_dev(img, "class", "w-52 sm:w-40 cursor-pointer");
     			if (img.src !== (img_src_value = "images/logo-white.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Jenix Tech Logo");
-    			add_location(img, file, 8, 4, 424);
+    			add_location(img, file, 8, 4, 426);
     			attr_dev(ul, "class", "flex w-36 sm:w-28 md:w-36 justify-between");
-    			add_location(ul, file, 14, 4, 604);
+    			add_location(ul, file, 14, 4, 606);
     			attr_dev(div, "class", "flex flex-col sm:flex-row items-center justify-between max-w-7xl mx-auto px-6 sm:px10 md:px-20 xl:px-0 h-full");
-    			add_location(div, file, 7, 2, 296);
-    			attr_dev(nav, "class", "h-36 sm:h-16 py-4 sm:py-0 bg-darkSecondary");
+    			add_location(div, file, 7, 2, 298);
+    			attr_dev(nav, "class", nav_class_value = "h-36 sm:h-16 py-4 sm:py-0 bg-darkSecondary");
     			add_location(nav, file, 6, 0, 237);
-    			attr_dev(h1, "class", "text-2xl md:text-3xl font-bold");
-    			add_location(h1, file, 27, 2, 1149);
-    			attr_dev(h5, "class", "mt-2 text-sm md:text-base");
-    			add_location(h5, file, 28, 2, 1224);
-    			attr_dev(header, "class", "text-light h-32 sm:h-40 md:h-32 bg-darkSecondary flex flex-col justify-center items-center text-center px-4");
-    			add_location(header, file, 26, 0, 1022);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -659,10 +756,8 @@ var app = (function () {
     			}
 
     			insert_dev(target, t1, anchor);
-    			insert_dev(target, header, anchor);
-    			append_dev(header, h1);
-    			append_dev(header, t3);
-    			append_dev(header, h5);
+    			if_block.m(target, anchor);
+    			insert_dev(target, if_block_anchor, anchor);
 
     			if (!mounted) {
     				dispose = listen_dev(img, "click", /*click_handler*/ ctx[2], false, false, false);
@@ -693,6 +788,16 @@ var app = (function () {
 
     				each_blocks.length = each_value.length;
     			}
+
+    			if (current_block_type !== (current_block_type = select_block_type(ctx))) {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			}
     		},
     		i: noop,
     		o: noop,
@@ -700,7 +805,8 @@ var app = (function () {
     			if (detaching) detach_dev(nav);
     			destroy_each(each_blocks, detaching);
     			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(header);
+    			if_block.d(detaching);
+    			if (detaching) detach_dev(if_block_anchor);
     			mounted = false;
     			dispose();
     		}
@@ -795,7 +901,7 @@ var app = (function () {
     const file$1 = "src/components/footer.svelte";
 
     // (41:6) {:else}
-    function create_else_block(ctx) {
+    function create_else_block$1(ctx) {
     	let t0;
     	let div;
     	let input;
@@ -876,7 +982,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block.name,
+    		id: create_else_block$1.name,
     		type: "else",
     		source: "(41:6) {:else}",
     		ctx
@@ -886,7 +992,7 @@ var app = (function () {
     }
 
     // (39:6) {#if newsletterMsg && newsletterSuccess}
-    function create_if_block(ctx) {
+    function create_if_block$1(ctx) {
     	let p;
     	let t;
 
@@ -916,7 +1022,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block.name,
+    		id: create_if_block$1.name,
     		type: "if",
     		source: "(39:6) {#if newsletterMsg && newsletterSuccess}",
     		ctx
@@ -992,8 +1098,8 @@ var app = (function () {
     	let p1;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*newsletterMsg*/ ctx[2] && /*newsletterSuccess*/ ctx[1]) return create_if_block;
-    		return create_else_block;
+    		if (/*newsletterMsg*/ ctx[2] && /*newsletterSuccess*/ ctx[1]) return create_if_block$1;
+    		return create_else_block$1;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -2079,7 +2185,7 @@ var app = (function () {
     }
 
     // (41:6) {#if error}
-    function create_if_block$1(ctx) {
+    function create_if_block$2(ctx) {
     	let p;
     	let t;
 
@@ -2104,7 +2210,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$1.name,
+    		id: create_if_block$2.name,
     		type: "if",
     		source: "(41:6) {#if error}",
     		ctx
@@ -2149,7 +2255,7 @@ var app = (function () {
     	let mounted;
     	let dispose;
     	let if_block0 = /*success*/ ctx[4] && create_if_block_1$1(ctx);
-    	let if_block1 = /*error*/ ctx[5] && create_if_block$1(ctx);
+    	let if_block1 = /*error*/ ctx[5] && create_if_block$2(ctx);
 
     	const block = {
     		c: function create() {
@@ -2320,7 +2426,7 @@ var app = (function () {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
     				} else {
-    					if_block1 = create_if_block$1(ctx);
+    					if_block1 = create_if_block$2(ctx);
     					if_block1.c();
     					if_block1.m(div0, null);
     				}
