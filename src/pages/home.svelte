@@ -21,7 +21,7 @@
 </section>
 <section class="h-auto sm:h-96 sm:py-60 pt-8 bg-light">
   <div class="max-w-7xl mx-auto px-6 sm:px10 md:px-20 xl:px-0 flex flex-col sm:flex-row items-center justify-center h-full text-darkSecondary sm:relative">
-    <p class="font-bold text-xl text-center mb-6 sm:absolute sm:mt-4">Bring your app to life with us <span class="text-accent uppercase">five</span> easy steps</p>
+    <p class="font-bold text-xl text-center mb-6 sm:mb-0 sm:absolute">Bring your app to life with us <span class="text-accent uppercase">five</span> easy steps</p>
     <ul class="flex flex-col sm:flex-row">
       {#each fiveSteps as step, index}
         <li class="flex flex-col {index % 2 === 0 ? 'sm:flex-col-reverse' : ''} items-center mb-10 sm:relative {index % 2 === 0 ? '-top-28' : 'top-36'}">
