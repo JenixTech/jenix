@@ -608,11 +608,11 @@ var app = (function () {
     			h5 = element("h5");
     			h5.textContent = "Software company building iOS and Android applications";
     			attr_dev(h1, "class", "text-2xl md:text-3xl font-bold");
-    			add_location(h1, file, 36, 4, 1723);
+    			add_location(h1, file, 36, 4, 1765);
     			attr_dev(h5, "class", "mt-2 text-sm md:text-base");
-    			add_location(h5, file, 37, 4, 1800);
+    			add_location(h5, file, 37, 4, 1842);
     			attr_dev(header, "class", "text-light h-32 sm:h-40 md:h-32 bg-darkSecondary flex flex-col justify-center items-center text-center px-4");
-    			add_location(header, file, 35, 2, 1594);
+    			add_location(header, file, 35, 2, 1636);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, header, anchor);
@@ -653,11 +653,11 @@ var app = (function () {
     			t1 = space();
     			h5 = element("h5");
     			h5.textContent = "Software company building iOS and Android applications";
-    			attr_dev(h1, "class", "text-2xl md:text-5xl font-bold");
-    			add_location(h1, file, 30, 6, 1384);
+    			attr_dev(h1, "class", "text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl font-bold");
+    			add_location(h1, file, 30, 6, 1401);
     			attr_dev(h5, "class", "mt-2 text-sm md:text-lg");
-    			add_location(h5, file, 31, 6, 1463);
-    			attr_dev(div, "class", "h-48 sm:h-144 w-full bg-overlay flex flex-col justify-center items-center px-2 sm:px-0");
+    			add_location(h5, file, 31, 6, 1505);
+    			attr_dev(div, "class", "h-64 sm:h-80 xl:h-96 2xl:h-144 w-full bg-overlay flex flex-col justify-center items-center px-2 sm:px-0");
     			set_style(div, "--overlay-image", "url('/images/header.jpg')");
     			set_style(div, "--overlay-colors", "rgba(22, 28, 34, .7), rgba(22, 28, 34, .7)");
     			add_location(div, file, 29, 4, 1163);

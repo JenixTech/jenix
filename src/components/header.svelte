@@ -27,8 +27,8 @@
 
 {#if page === pages.home}
   <header class="text-light h-full bg-darkSecondary flex flex-col justify-center items-center text-center">
-    <div class="h-48 sm:h-144 w-full bg-overlay flex flex-col justify-center items-center px-2 sm:px-0" style="--overlay-image: url('/images/header.jpg'); --overlay-colors: rgba(22, 28, 34, .7), rgba(22, 28, 34, .7);">
-      <h1 class="text-2xl md:text-5xl font-bold">App ideas, come to life.</h1>
+    <div class="h-64 sm:h-80 xl:h-96 2xl:h-144 w-full bg-overlay flex flex-col justify-center items-center px-2 sm:px-0" style="--overlay-image: url('/images/header.jpg'); --overlay-colors: rgba(22, 28, 34, .7), rgba(22, 28, 34, .7);">
+      <h1 class="text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl font-bold">App ideas, come to life.</h1>
       <h5 class="mt-2 text-sm md:text-lg">Software company building iOS and Android applications</h5>
     </div>
   </header>
