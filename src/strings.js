@@ -22,7 +22,7 @@ export const home = {
       text: "Idea becomes reality",
       image: "images/cogs.svg"
     }, {
-      title: "Text",
+      title: "Test",
       text: "Internal + external testing",
       image: "images/checklist.svg"
     }, {
