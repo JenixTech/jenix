@@ -11,7 +11,7 @@ export const home = {
   fiveSteps: [
     {
       title: "Idea",
-      text: "You first thoughts",
+      text: "Your first thoughts",
       image: "images/lightbulb.svg"
     }, {
       title: "Design",
