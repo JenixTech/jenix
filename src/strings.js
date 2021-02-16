@@ -55,7 +55,7 @@ export const about = {
   paragraphs: [
     'Founded in 2020, Jenix Technologies is a full-stack and mobile app development company based in the UK.',
     'Out boutique-in-house team includes a full-time designer, software developer, and a specialist marketing and PR consultant.',
-    'Unlike larger enterprises, we take on fewer projects, allowing us the time to get to know and fully understand your idea and vision, so we can fully support you with conceptual challends, all the way through the design, development, and launch cycles.',
+    'Unlike larger enterprises, we take on fewer projects, allowing us the time to get to know and fully understand your idea and vision, so we can fully support you with conceptual challenges, all the way through the design, development, and launch cycles.',
     'We approach every project differently on account of your needs, to ensure we work in the most effiecient way for your time and resources whilst maintaining the highest quality results.',
   ],
   staffs: [
