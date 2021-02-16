@@ -90,7 +90,7 @@ export const about = {
     }
   ],
   contact: {
-    title: "Contact us to discusss your ideas",
+    title: "Contact us to discuss your ideas",
     text: "Get in touch with our friendly team",
     button: "Contact us"
   }
